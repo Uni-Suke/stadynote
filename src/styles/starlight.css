@@ -76,3 +76,24 @@ body { letter-spacing: .015em; }
 @media (prefers-reduced-motion: reduce) {
   .sl-markdown-content .lesson-card { transition: none; }
 }
+/* カード全体をクリック可能にする */
+.card-links .card {
+  position: relative;
+  transition: transform 0.15s ease, border-color 0.15s ease;
+}
+
+.card-links .card:hover {
+  transform: translateY(-2px);
+  border-color: var(--sl-color-accent);
+}
+
+.card-links .card a::after {
+  content: "";
+  position: absolute;
+  inset: 0; /* top:0, left:0, right:0, bottom:0 と同義 */
+  z-index: 1;
+}
+
+.card-links .card a {
+  text-decoration: none;
+}

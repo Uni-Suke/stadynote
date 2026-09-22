@@ -12,20 +12,35 @@ hero:
       variant: minimal
 ---
 
-import { Card, CardGrid } from '@astrojs/starlight/components';
+import { Card, CardGrid } from "@astrojs/starlight/components";
 
 ## 知識がつながる、7つのステップ
 
 基礎から順番に。気になる章からでも。
 
-<CardGrid>
-  <Card title="電子回路の基礎" icon="open-book">[電圧・電流から回路図まで](/basics/)</Card>
-  <Card title="電子部品を知る" icon="puzzle">[働き、選び方、壊れ方](/components/)</Card>
-  <Card title="基本回路を読む" icon="document">[定番回路を読み解く](/circuits/)</Card>
-  <Card title="測定器を使う" icon="setting">[つなぎ方から読み方まで](/measurement/)</Card>
-  <Card title="実験で確かめる" icon="flask">[低電圧の実験で確かめる](/experiments/)</Card>
-  <Card title="故障を切り分ける" icon="magnifying-glass">[根拠を持って原因を絞る](/troubleshooting/)</Card>
-  <Card title="回路を設計する" icon="pencil">[仕様から実測まで](/design/)</Card>
-</CardGrid>
-
+<div class="card-links">
+  <CardGrid>
+    <Card title="電子回路の基礎" icon="open-book" class="card-link">
+      [電圧・電流から回路図まで](/basics/)
+    </Card>
+    <Card title="電子部品を知る" icon="puzzle" class="card-link">
+      [働き、選び方、壊れ方](/components/)
+    </Card>
+    <Card title="基本回路を読む" icon="document" class="card-link">
+      [定番回路を読み解く](/circuits/)
+    </Card>
+    <Card title="測定器を使う" icon="setting" class="card-link">
+      [つなぎ方から読み方まで](/measurement/)
+    </Card>
+    <Card title="実験で確かめる" icon="flask" class="card-link">
+      [低電圧の実験で確かめる](/experiments/)
+    </Card>
+    <Card title="故障を切り分ける" icon="magnifying-glass" class="card-link">
+      [根拠を持って原因を絞る](/troubleshooting/)
+    </Card>
+    <Card title="回路を設計する" icon="pencil" class="card-link">
+      [仕様から実測まで](/design/)
+    </Card>
+  </CardGrid>
+</div>
 [学習ロードマップ](/roadmap/) · [このサイトについて](/about/)
