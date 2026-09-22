@@ -1,0 +1,78 @@
+@import 'katex/dist/katex.min.css';
+
+:root {
+  --sl-color-accent-low: #e1f2eb;
+  --sl-color-accent: #17765b;
+  --sl-color-accent-high: #164b3d;
+  --sl-content-width: 51rem;
+  --sl-text-5xl: 2.7rem;
+}
+:root[data-theme='dark'] {
+  --sl-color-accent-low: #12382e;
+  --sl-color-accent: #6fd1a7;
+  --sl-color-accent-high: #d1f3e2;
+}
+body { letter-spacing: .015em; }
+.sl-markdown-content { line-height: 1.85; }
+.sl-markdown-content h2 { margin-block-start: 2.7rem; padding-block-end: .35rem; border-bottom: 1px solid var(--sl-color-hairline); }
+.sl-markdown-content h3 { margin-block-start: 2rem; }
+.sl-markdown-content .card { border-radius: .8rem; }
+.sl-markdown-content table { font-variant-numeric: tabular-nums; }
+.sl-markdown-content .katex-display { overflow-x: auto; overflow-y: hidden; padding-block: .4rem; }
+@media (max-width: 50rem) { :root { --sl-text-5xl: 2.1rem; } }
+
+/* Chapter lesson lists */
+.sl-markdown-content .lesson-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+  margin-block: 1.5rem 2.5rem;
+}
+.sl-markdown-content .lesson-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  padding: 1.15rem 1.25rem 1.25rem;
+  border: 1px solid var(--sl-color-hairline);
+  border-radius: .9rem;
+  background: var(--sl-color-bg-nav);
+  box-shadow: 0 2px 12px rgb(0 0 0 / .035);
+  transition: border-color .2s, transform .2s, box-shadow .2s;
+}
+.sl-markdown-content .lesson-card:hover,
+.sl-markdown-content .lesson-card:focus-within {
+  border-color: var(--sl-color-accent);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgb(0 0 0 / .08);
+}
+.sl-markdown-content .lesson-card__number {
+  color: var(--sl-color-accent);
+  font-size: .73rem;
+  font-weight: 750;
+  letter-spacing: .12em;
+}
+.sl-markdown-content .lesson-card h3 {
+  margin-block: .5rem .45rem;
+  font-size: 1.05rem;
+  line-height: 1.45;
+}
+.sl-markdown-content .lesson-card h3 a { color: var(--sl-color-text-accent); text-decoration: none; }
+.sl-markdown-content .lesson-card h3 a::after { content: ''; position: absolute; inset: 0; }
+.sl-markdown-content .lesson-card h3 a:focus-visible { outline: 2px solid var(--sl-color-accent); outline-offset: 3px; }
+.sl-markdown-content .lesson-card p { margin: 0 0 1.5rem; color: var(--sl-color-gray-3); font-size: .9rem; line-height: 1.65; }
+.sl-markdown-content .lesson-card__arrow { position: absolute; inset-block-end: .75rem; inset-inline-end: 1.15rem; color: var(--sl-color-accent); font-size: 1.3rem; }
+.sl-markdown-content .katex-display {
+  margin-block: 1.25rem;
+  padding: .9rem 1rem;
+  border: 1px solid var(--sl-color-hairline);
+  border-radius: .65rem;
+  background: var(--sl-color-bg-nav);
+  font-size: 1.08em;
+}
+@media (max-width: 40rem) {
+  .sl-markdown-content .lesson-grid { grid-template-columns: 1fr; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .sl-markdown-content .lesson-card { transition: none; }
+}
